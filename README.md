@@ -1,8 +1,8 @@
 # Docker based Azure Function converting HTML to PDF
 
-With this Azure Function you can convert an URL or HTML to PDF. For the converstion the Function is internlly using chromium headless with Puppeteer API.
+With this Azure Function you can convert an URL or HTML string to a PDF. For the conversion the Function uses internally chromium headless with Puppeteer API.
 
-You can easly host the Function in your own Azure Subscription (Instructions coming soon...) or try it here:
+You can easly host the Function in your own Azure Subscription (Instructions coming soon...) or try it online:
 https://ltwlf-functions-html2pdf.azurewebsites.net 
 
 ### Function URL:
