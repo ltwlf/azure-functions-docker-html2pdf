@@ -1,0 +1,70 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "HTML to PDF converter",
+        "version": "1.0.0.0",
+        "description": "Convert HTML to PDF"
+    },
+    "host": "ltwlf-functions-html-to-pdf.azurewebsites.net",
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [],
+    "produces": [],
+    "paths": {
+        "/Html2Pdf": {
+            "post": {
+                "operationId": "Convert",
+                "description": "HTML",
+                "summary": "Convert HTML to PDF",
+                "consumes": [
+                    "text/plain"
+                ],
+                "produces": [
+                    "application/pdf"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "base64",
+                        "required": false,
+                        "default": "true",
+                        "type": "string",
+                        "x-ms-visibility": "internal"
+                    },
+                    {
+                        "in": "body",
+                        "name": "HTML",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "x-ms-summary": "HTML"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "PDF File",
+                        "x-ms-summary": "PDF File (Binary)",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "base64": {
+                                    "type": "string",
+                                    "description": "base64"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {},
+    "parameters": {},
+    "responses": {},
+    "securityDefinitions": {},
+    "security": [],
+    "tags": []
+}
