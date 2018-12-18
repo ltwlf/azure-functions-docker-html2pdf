@@ -14,3 +14,8 @@ Example GET Request with URL parameter:
 https://ltwlf-functions-html-to-pdf.azurewebsites.net/api/Html2Pdf?url=https://blog.leitwolf.io
 
 
+### Azure Settings
+When you host the Function in Azure you have to configure the AzureWebJobsStorage and the AzureWebJobsSecretStorageType to store the secrets appropriately: 
+
+AzureWebJobsSecretStorageType=Blob
+AzureWebJobsStorage=DefaultEndpointsProtocol=https;AccountName=[name];AccountKey=[key]
