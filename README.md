@@ -11,5 +11,6 @@ You can either append the query parameter URL to a GET or POST request or you ca
 
 Example GET Request with URL parameter:
 
-https://ltwlf-api.azurewebsites.net/public/html2pdf/html2pdf?url=http%3A%2F%2Fblog.leitwolf.io
+https://ltwlf-functions-html-to-pdf.azurewebsites.net/api/Html2Pdf?url=https://blog.leitwolf.io
+
 
