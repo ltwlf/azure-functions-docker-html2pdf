@@ -23,7 +23,7 @@ module.exports = async function (context, req) {
             await page.goto(req.query.url, { waitUntil: 'networkidle2' });
         }
         else {
-            await page.goto(`data:text/html,${req.body}`, { waitUntil: 'networkidle2' });
+            await page.goto(`data:text/html;charset=utf-8,${req.body}`, { waitUntil: 'networkidle2' });
         }
         await page.pdf({ path: tempFile, format: 'A4' });
         await browser.close();
