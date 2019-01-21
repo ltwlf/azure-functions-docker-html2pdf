@@ -20,10 +20,10 @@ module.exports = async function (context, req) {
         const base64format = req.query.base64 === "true" || false;
 
         if (req.query.url) {
-            await page.goto(req.query.url, { waitUntil: 'networkidle2' });
+            await page.goto(req.query.url, { waitUntil: 'networkidle0' });
         }
         else {
-            await page.goto(`data:text/html;charset=utf-8,${req.body}`, { waitUntil: 'networkidle2' });
+            await page.goto(`data:text/html;charset=utf-8,${req.body}`, { waitUntil: 'networkidle0' });
         }
         await page.pdf({ path: tempFile, format: 'A4' });
         await browser.close();
