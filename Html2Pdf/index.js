@@ -25,7 +25,7 @@ module.exports = async function (context, req) {
         else {
             await page.goto(`data:text/html;charset=utf-8,${req.body}`, { waitUntil: 'networkidle0' });
         }
-        await page.pdf({ path: tempFile, format: 'A4' });
+        await page.pdf({ path: tempFile });
         await browser.close();
 
         var data = fs.readFileSync(tempFile);
