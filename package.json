@@ -18,7 +18,7 @@
   "homepage": "https://github.com/ltwlf/azure-functions-docker-html2pdf#readme",
   "dependencies": {
     "binary-base64": "^1.1.0",
-    "puppeteer": "^1.8.0",
+    "puppeteer": "^1.13.0",
     "uuid": "^3.3.2"
   }
 }
